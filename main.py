@@ -2,13 +2,11 @@
 # 批量修改图片尺寸
 # imageResize(r"D:\tmp", r"D:\tmp\3", 0.7)
 import time
-
-from PIL import ImageGrab
+# from PIL import ImageGrab
 import os
 import PIL.Image as Image
 
-HOME = os.getcwd()
-
+me = os.getcwd()
 
 
 # 以第一个像素为准，相同色改为透明
@@ -31,11 +29,11 @@ def mains(input_path, output_path, scale, width, height):
     files = os.listdir(input_path)
     os.chdir(input_path)
     # 判断输出文件夹是否存在，不存在则创建
-    if (not os.path.exists(output_path)):
+    if not os.path.exists(output_path):
         os.makedirs(output_path)
     for file in files:
         # 判断是否为文件，文件夹不操作
-        if (os.path.isfile(file)):
+        if os.path.isfile(file):
             # img = Image.open(file)
             # width = int(img.size[0] * scale)
             # height = int(img.size[1] * scale)
@@ -46,7 +44,7 @@ def mains(input_path, output_path, scale, width, height):
             img.save(os.path.join(output_path, "New_" + file))
 
 
-def _filesafer(filename):
+def _file_safer(filename):
     import os
     file_dir = os.path.split(filename)[0]
     if not os.path.isdir(file_dir):
@@ -54,6 +52,7 @@ def _filesafer(filename):
     if not os.path.exists(filename):
         os.system(r'touch %s' % filename)
     return filename
+
 
 def pull(ids):
     names = []
@@ -88,31 +87,33 @@ def pull(ids):
     return dicts
 
 
-def urllib_download(HOMEWORK, URL, PATH):
+def urllib_download(home, url, path):
     from urllib.request import urlretrieve
-    ros = HOMEWORK + "/" + PATH + ".png"
-    _filesafer(ros)
-    urlretrieve(URL, ros)
+    ros = home + "/" + path + ".png"
+    _file_safer(ros)
+    urlretrieve(url, ros)
+
 
 def run(opps):
-    HOMEWORK = HOME + "/work" + str(opps)
-    nowtimes = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    home = me + "/work" + str(opps)
+    do_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     datadict = pull(opps)
     if len(datadict) == 0:
-        print("NOnewdata")
+        print("No_data")
         with open('log.txt', 'a+') as f:
-            f.write(nowtimes + " NO NEW DATA" + "\n")
+            f.write(do_time + " NO NEW DATA" + "\n")
         pass
     else:
         for n, u in datadict.items():
             print("STARTing//--//" + n)
-            urllib_download(HOMEWORK, u, n)
+            urllib_download(home, u, n)
         print("OK---*-*-*-*-*-*-*-*")
         with open('log.txt', 'a+') as f:
-            f.write(nowtimes + "DONE" + "\n")
+            f.write(do_time + "DONE" + "\n")
     # 执行图片处理
-    mains(HOMEWORK, HOME + "/workdeal"+ str(opps), 0.7, 512, 512)
+    mains(home, me + "/workdeal" + str(opps), 0.7, 512, 512)
+
+
 if __name__ == '__main__':
     run(237)
     # 288 向晚 -  237 贝拉  -
-
