@@ -98,7 +98,7 @@ def run(opps):
     home = me + "/work" + str(opps)
     do_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     datadict = pull(opps)
-    if len(datadict) == 0:
+    if not datadict:
         print("No_data")
         with open('log.txt', 'a+') as f:
             f.write(do_time + " NO NEW DATA" + "\n")
