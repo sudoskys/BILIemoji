@@ -10,6 +10,9 @@ if __name__ == '__main__':
     # 这里填表情包ID
     # Id从http://api.bilibili.com/x/emote/user/panel/web?business=reply查看自己的，来源
 ```
+
+>TIPS：main.py 适用于各个平台，使用os获取路径，linux&windows都可以运行.
+
 ### ID获取方法
 
 https://github.com/SocialSisterYi/bilibili-API-collect/blob/master/emoji/list.md#%E8%8E%B7%E5%8F%96%E6%88%91%E7%9A%84%E8%A1%A8%E6%83%85%E5%88%97%E8%A1%A8
