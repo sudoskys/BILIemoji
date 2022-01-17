@@ -101,7 +101,7 @@ def run(opps):
     if not datadict:
         print("No_data")
         with open('log.txt', 'a+') as f:
-            f.write(do_time + " NO NEW DATA" + "\n")
+            f.write(do_time + "_NO_" + str(opps) +"\n")
         pass
     else:
         for n, u in datadict.items():
@@ -109,7 +109,7 @@ def run(opps):
             urllib_download(home, u, n)
         print("OK---*-*-*-*-*-*-*-*")
         with open('log.txt', 'a+') as f:
-            f.write(do_time + "DONE" + "\n")
+            f.write(do_time + "_DONE_" + str(opps) + "\n")
     # 执行图片处理
     mains(home, me + "/workdeal" + str(opps), 0.7, 512, 512)
 
