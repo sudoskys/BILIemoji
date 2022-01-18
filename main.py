@@ -1,18 +1,28 @@
 # _*_ coding: utf-8 _*_
+# _*_ coding: utf-8 _*_
 """
-Time:     1/18/22 8:15 PM
-Author:   sudoskys
-Version:  V 0.1
-File:     main.py
-Describe: Write by pycharm, Github link: https://github.com/sudoskys/
+__project__ = 'biliemoji'
+__file_name__ = 'mains'
+__author__ = sudoskys
+__time__ = '1/18/22 8:31 PM'
+__product_name__ = PyCharm
+__version__ V 0.1
+# code is far away from bugs with the god,author here https://github.com/sudoskys
+    ____  _                  
+   / __ \(_)___ _____  ____ _
+  / / / / / __ `/ __ \/ __ `/
+ / /_/ / / /_/ / / / / /_/ / 
+/_____/_/\__,_/_/ /_/\__,_/                    
 """
-
+# 批量修改图片尺寸
+# imageResize(r"D:\tmp", r"D:\tmp\3", 0.7)
 import time
 # from PIL import ImageGrab
 import os
 import PIL.Image as Image
 
 me = os.getcwd()
+
 
 # 以第一个像素为准，相同色改为透明
 def transparent_back(img):
@@ -64,11 +74,14 @@ def pull(ids):
     urls = []
     import requests
     import json
+    # 请求地址
     url = "http://api.bilibili.com/x/emote/package?business=reply&ids=" + str(ids)
     response = requests.get(url)
+    # 获取请求状态码 200为正常
     if response.status_code == 200:
+        # 获取相应内容
         content = response.text
-        # json转字典
+        # 字典
         json_dict = json.loads(content)
         if json_dict['code'] == 0:
             if json_dict['data']['packages']:
@@ -102,7 +115,7 @@ def run(opps):
     if not datadict:
         print("No_data")
         with open('log.txt', 'a+') as f:
-            f.write(do_time + "_NO_" + str(opps) +"\n")
+            f.write(do_time + "_NO_" + str(opps) + "\n")
         pass
     else:
         for n, u in datadict.items():
@@ -116,5 +129,6 @@ def run(opps):
 
 
 if __name__ == '__main__':
-    run(221)
-    # - 288 向晚 - 237 贝拉  - 221 大航海嘉然  - 237 贝拉kira  - 245 嘉然今天吃什么 -288 向晚大魔王 -333 乃琳Queen  -339 珈乐Carol -229 雫るる
+    run(339)
+
+    # - 288 向晚 - 237 贝拉  - 221 大航海嘉然  - 237 贝拉kira  - 245 嘉然今天吃什么 -288 向晚大魔王 -333 乃琳Queen  -339 珈乐Carol
