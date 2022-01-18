@@ -116,7 +116,7 @@ def run(opps):
     datadict = pull(opps)
     if not datadict:
         print("No_data")
-        with open('log.txt', 'a+') as f:
+        with open(me + '/log.txt', 'a+') as f:
             f.write(do_time + "_NO_" + str(opps) + "\n")
         pass
     else:
@@ -124,7 +124,7 @@ def run(opps):
             print("STARTing//--//" + n)
             urllib_download(home, u, n)
         print("OK---*-*-*-*-*-*-*-*")
-        with open('log.txt', 'a+') as f:
+        with open(me + '/log.txt', 'a+') as f:
             f.write(do_time + "_DONE_" + str(opps) + "\n")
     # 执行图片处理
     mains(home, target + "/work_deal" + str(opps), 0.7, 512, 512)
@@ -132,5 +132,6 @@ def run(opps):
 
 if __name__ == '__main__':
     run(288)
+
 
     #  - 221 大航海嘉然  - 237 贝拉kira  - 245 嘉然今天吃什么 -288 向晚大魔王 -333 乃琳Queen  -339 珈乐Carol
