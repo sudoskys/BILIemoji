@@ -1,19 +1,19 @@
 # _*_ coding: utf-8 _*_
-# _*_ coding: utf-8 _*_
 """
 __project__ = 'biliemoji'
 __file_name__ = 'mains'
-__author__ = sudoskys
-__time__ = '1/18/22 8:31 PM'
-__product_name__ = PyCharm
-__version__ V 0.1
-# code is far away from bugs with the god,author here https://github.com/sudoskys
+__author__ = 'sudoskys'
+__time__ = '1/18/22 8:36 PM'
+__product_name__ = 'PyCharm'
+__version__ = 'Jan182036'
+# code is far away from bugs with the god，author here https://github.com/sudoskys
     ____  _                  
    / __ \(_)___ _____  ____ _
   / / / / / __ `/ __ \/ __ `/
  / /_/ / / /_/ / / / / /_/ / 
 /_____/_/\__,_/_/ /_/\__,_/                    
 """
+
 # 批量修改图片尺寸
 # imageResize(r"D:\tmp", r"D:\tmp\3", 0.7)
 import time
