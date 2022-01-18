@@ -1,7 +1,7 @@
 # _*_ coding: utf-8 _*_
 """
 __project__ = 'biliemoji'
-__file_name__ = 'mains'
+__file_name__ = 'main'
 __author__ = 'sudoskys'
 __time__ = '1/18/22 8:36 PM'
 __product_name__ = 'PyCharm'
