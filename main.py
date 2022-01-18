@@ -7,18 +7,19 @@ __time__ = '1/18/22 8:36 PM'
 __product_name__ = 'PyCharm'
 __version__ = 'Jan182036'
 # code is far away from bugs with the god，author here https://github.com/sudoskys
-    ____  _                  
+    ____  _
    / __ \(_)___ _____  ____ _
   / / / / / __ `/ __ \/ __ `/
- / /_/ / / /_/ / / / / /_/ / 
-/_____/_/\__,_/_/ /_/\__,_/                    
+ / /_/ / / /_/ / / / / /_/ /
+/_____/_/\__,_/_/ /_/\__,_/
 """
 
+# from PIL import ImageGrab
+import os
 # 批量修改图片尺寸
 # imageResize(r"D:\tmp", r"D:\tmp\3", 0.7)
 import time
-# from PIL import ImageGrab
-import os
+
 import PIL.Image as Image
 
 me = os.getcwd()
@@ -27,10 +28,10 @@ me = os.getcwd()
 # 以第一个像素为准，相同色改为透明
 def transparent_back(img):
     img = img.convert('RGBA')
-    L, H = img.size
+    l, h = img.size
     color_0 = img.getpixel((0, 0))
-    for h in range(H):
-        for l in range(L):
+    for h in range(h):
+        for l in range(l):
             dot = (l, h)
             color_1 = img.getpixel(dot)
             if color_1 == color_0:
@@ -109,7 +110,8 @@ def urllib_download(home, url, path):
 
 
 def run(opps):
-    home = me + "/work" + str(opps)
+    target = me + "/" + str(opps)
+    home = target + "/work" + str(opps)
     do_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     datadict = pull(opps)
     if not datadict:
@@ -125,10 +127,10 @@ def run(opps):
         with open('log.txt', 'a+') as f:
             f.write(do_time + "_DONE_" + str(opps) + "\n")
     # 执行图片处理
-    mains(home, me + "/workdeal" + str(opps), 0.7, 512, 512)
+    mains(home, target + "/work_deal" + str(opps), 0.7, 512, 512)
 
 
 if __name__ == '__main__':
-    run(339)
+    run(288)
 
-    # - 288 向晚 - 237 贝拉  - 221 大航海嘉然  - 237 贝拉kira  - 245 嘉然今天吃什么 -288 向晚大魔王 -333 乃琳Queen  -339 珈乐Carol
+    #  - 221 大航海嘉然  - 237 贝拉kira  - 245 嘉然今天吃什么 -288 向晚大魔王 -333 乃琳Queen  -339 珈乐Carol
