@@ -6,7 +6,7 @@
 ```python
 if __name__ == '__main__':
     run(237)
-    # 288 向晚 -  237 贝拉  -
+    # - 288 向晚 - 237 贝拉  - 221 大航海嘉然  - 237 贝拉kira  - 245 嘉然今天吃什么 -288 向晚大魔王 -333 乃琳Queen  -339 珈乐Carol
     # 这里填表情包ID
     # Id从http://api.bilibili.com/x/emote/user/panel/web?business=reply查看自己的，来源
 ```
