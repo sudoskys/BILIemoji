@@ -15,6 +15,7 @@ if __name__ == '__main__':
 
 ### ID获取方法
 http://api.bilibili.com/x/emote/user/panel/web?business=reply 查看自己的
+
 https://github.com/SocialSisterYi/bilibili-API-collect/blob/master/emoji/list.md#%E8%8E%B7%E5%8F%96%E6%88%91%E7%9A%84%E8%A1%A8%E6%83%85%E5%88%97%E8%A1%A8
 
 ### 默认调大小512
