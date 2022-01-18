@@ -1,4 +1,11 @@
-# coding=utf-8
+# _*_ coding: utf-8 _*_
+"""
+Time:     1/18/22 8:15 PM
+Author:   sudoskys
+Version:  V 0.1
+File:     main.py
+Describe: Write by pycharm, Github link: https://github.com/sudoskys/
+"""
 
 import time
 # from PIL import ImageGrab
@@ -6,7 +13,6 @@ import os
 import PIL.Image as Image
 
 me = os.getcwd()
-
 
 # 以第一个像素为准，相同色改为透明
 def transparent_back(img):
