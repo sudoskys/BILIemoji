@@ -13,7 +13,7 @@ me = os.getcwd()
 def transparent_back(img):
     img = img.convert('RGBA')
     L, H = img.size
-    color_0 = img.getpixel((2, 2))
+    color_0 = img.getpixel((0, 0))
     for h in range(H):
         for l in range(L):
             dot = (l, h)
@@ -59,7 +59,6 @@ def pull(ids):
     urls = []
     import requests
     import json
-    # SESS_DATA = "3f************8e*11"
     # 请求地址
     url = "http://api.bilibili.com/x/emote/package?business=reply&ids=" + str(ids)
     response = requests.get(url)
@@ -115,5 +114,5 @@ def run(opps):
 
 
 if __name__ == '__main__':
-    run(237)
+    run(221)
     # - 288 向晚 - 237 贝拉  - 221 大航海嘉然  - 237 贝拉kira  - 245 嘉然今天吃什么 -288 向晚大魔王 -333 乃琳Queen  -339 珈乐Carol

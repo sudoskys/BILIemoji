@@ -1,0 +1,4 @@
+requests
+Image
+
+Pillow~=9.0.0
