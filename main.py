@@ -1,6 +1,5 @@
 # coding=utf-8
-# 批量修改图片尺寸
-# imageResize(r"D:\tmp", r"D:\tmp\3", 0.7)
+
 import time
 # from PIL import ImageGrab
 import os
@@ -59,14 +58,11 @@ def pull(ids):
     urls = []
     import requests
     import json
-    # 请求地址
     url = "http://api.bilibili.com/x/emote/package?business=reply&ids=" + str(ids)
     response = requests.get(url)
-    # 获取请求状态码 200为正常
     if response.status_code == 200:
-        # 获取相应内容
         content = response.text
-        # json转数组（Py叫字典，我喜欢叫数组）
+        # json转字典
         json_dict = json.loads(content)
         if json_dict['code'] == 0:
             if json_dict['data']['packages']:
