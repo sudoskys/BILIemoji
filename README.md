@@ -1,6 +1,7 @@
 # BILIemoji
 
 哔哩哔哩表情包， 自动抠图透明化背景， 下载表情， 使用Python, 自动缩放调大小
+![counter](https://count.getloli.com/get/@sudoskys-github-BILIemoji?theme=moebooru)
 
 ### USE
 ```python
