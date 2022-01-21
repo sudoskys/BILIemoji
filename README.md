@@ -39,3 +39,10 @@ https://github.com/SocialSisterYi/bilibili-API-collect/blob/master/emoji/list.md
 mains(HOMEWORK, HOME + "/workdeal"+ str(opps), 0.7, 512, 512)
 # 0.7为缩放比例，但是因为我注释掉了，所以不起作用..
 ```
+### 引用参考
+
+| URL | Author |
+| --- | ------------- |
+| [Python PIL.Image之修改图片背景为透明](https://blog.csdn.net/qq_40878431/article/details/82941982) | 地狱恶狼 |
+
+
