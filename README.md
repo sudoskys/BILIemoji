@@ -4,6 +4,10 @@
 
 ![counter](https://count.getloli.com/get/@sudoskys-github-BILIemoji?theme=moebooru)
 
+[![MIT License](https://img.shields.io/badge/LICENSE-MIT-ff69b4)](http://choosealicense.com/licenses/mit/) 
+![v](https://img.shields.io/badge/Version-220121-9cf)
+[![d](https://img.shields.io/badge/Sponsor-me-ff69b4)](https://azz.net/ly233)
+
 ### USE
 ```python
 if __name__ == '__main__':
