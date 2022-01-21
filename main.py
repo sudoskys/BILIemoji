@@ -16,20 +16,17 @@ __version__ = 'Jan182036'
 
 # from PIL import ImageGrab
 import os
-# 批量修改图片尺寸
-# imageResize(r"D:\tmp", r"D:\tmp\3", 0.7)
 import time
-
 import PIL.Image as Image
 
 me = os.getcwd()
 
 
-# 以第一个像素为准，相同色改为透明
 def transparent_back(img):
     img = img.convert('RGBA')
     l, h = img.size
     color_0 = img.getpixel((0, 0))
+    # 取样第一个像素
     for h in range(h):
         for l in range(l):
             dot = (l, h)
@@ -39,16 +36,12 @@ def transparent_back(img):
                 img.putpixel(dot, color_1)
     return img
 
-
 def mains(input_path, output_path, scale, width, height):
-    # 获取输入文件夹中的所有文件/夹，并改变工作空间
     files = os.listdir(input_path)
     os.chdir(input_path)
-    # 判断输出文件夹是否存在，不存在则创建
     if not os.path.exists(output_path):
         os.makedirs(output_path)
     for file in files:
-        # 判断是否为文件，文件夹不操作
         if os.path.isfile(file):
             # img = Image.open(file)
             # width = int(img.size[0] * scale)
@@ -75,7 +68,6 @@ def pull(ids):
     urls = []
     import requests
     import json
-    # 请求地址
     url = "http://api.bilibili.com/x/emote/package?business=reply&ids=" + str(ids)
     response = requests.get(url)
     # 获取请求状态码 200为正常
@@ -87,7 +79,6 @@ def pull(ids):
         if json_dict['code'] == 0:
             if json_dict['data']['packages']:
                 json_list = json_dict['data']['packages'][0]['emote']
-                # 打印所有结果
                 for i in range(len(json_list)):
                     name = (str(json_list[i].get('package_id')) + '_' + str(json_list[i].get('text')))
                     url = (json_list[i].get('url'))
