@@ -22,6 +22,9 @@ if __name__ == '__main__':
 ### ID获取方法
 http://api.bilibili.com/x/emote/user/panel/web?business=reply 查看自己的，浏览器需要登陆bilibili
 
+[常见ID](https://github.com/sudoskys/BILIemoji/blob/main/common_id.md)
+
+
 #### 数据举例
 ```
 {"id":5112,"package_id":237,"text":"[贝拉kira_笔芯]","url":"http://i0.hdslb.com/bfs/emote/3cbc05078eee45c0861ce37e63092e379ae93d57.png","mtime":1637148616,"type":3,"attr":0,"meta":{"size":2,"suggest":[""],"alias":"笔芯"}
