@@ -48,4 +48,7 @@ mains(HOMEWORK, HOME + "/workdeal"+ str(opps), 0.7, 512, 512)
 | --- | ------------- |
 | [Python PIL.Image之修改图片背景为透明](https://blog.csdn.net/qq_40878431/article/details/82941982) | 地狱恶狼 |
 
+### 用途声明
+仅仅供学习交流使用，请勿滥用，后果自负
+
 
