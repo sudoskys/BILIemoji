@@ -6,7 +6,8 @@
 
 [![MIT License](https://img.shields.io/badge/LICENSE-MIT-ff69b4)](http://choosealicense.com/licenses/mit/) 
 ![v](https://img.shields.io/badge/Version-220121-9cf)
-[![d](https://img.shields.io/badge/Sponsor-me-ff69b4)](https://azz.net/ly233)
+[![s](https://img.shields.io/badge/Become-sponsor-DB94A2)](https://dun.mianbaoduo.com/@Sky0717)
+
 
 ### USE
 ```python
